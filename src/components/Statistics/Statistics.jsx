@@ -1,4 +1,5 @@
-export default function Statistics({title, stats}) {
+import PropTypes from 'prop-types';
+export default function Statistics({ title, stats }) {
     return (
         <section class="statistics">
             {title && (<h2 class="title">{title}</h2>)}
@@ -14,4 +15,11 @@ export default function Statistics({title, stats}) {
         </section>
         
     )
+}
+Statistics.propTypes = {
+    title: PropTypes.string,
+    // userName: PropTypes.string.isRequired,
+    // tag: PropTypes.string.isRequired,
+    // location: PropTypes.string.isRequired,
+    // stats: PropTypes.objectOf(PropTypes.number),
 }

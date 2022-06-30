@@ -1,9 +1,26 @@
+import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
-export default function Profile ({avatar, userName, tag, location, stats}) {
-    return (
-      <div class="profile">
-        <div class="description">
-          <img
+import { Avatar } from './Profile.styled';
+export default function Profile({ avatar, userName, tag, location, stats }) {
+  return (
+    <Box
+      bg="primary"
+      width={[1 / 2]}
+      height="auto"
+      ml="auto"
+      mr="auto"
+      mt={[6]}
+      display="flex"
+      flexDirection="column"
+      // align-items="center"
+      // justify-content="center"
+      position="relative"
+      as="section"
+      >
+        <Box
+        
+        >
+          <Avatar
             src={avatar}
             alt="User avatar"
             class="avatar"
@@ -11,7 +28,7 @@ export default function Profile ({avatar, userName, tag, location, stats}) {
           <p class="name">{userName}</p>
           <p class="tag">@{tag}</p>
           <p class="location">{location}</p>
-        </div>
+        </Box>
 
         <ul class="stats">
           <li>
@@ -27,7 +44,7 @@ export default function Profile ({avatar, userName, tag, location, stats}) {
             <span class="quantity">{stats.likes}</span>
           </li>
         </ul>
-      </div>
+      </Box>
     )
 };
 

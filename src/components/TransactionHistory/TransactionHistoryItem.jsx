@@ -1,4 +1,4 @@
-export default function TransactionHistoryItem ({type, amount, currency, id }) {
+export default function TransactionHistoryItem ({type, amount, currency }) {
     return (
         <>
         <tr>

@@ -4,17 +4,16 @@ export const Table = styled.table`
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    box-shadow: 1px #bdb9b9;
-    border: 1px solid ${p => p.theme.colors.tableBorder};
+    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.tableBorder};
     border-collapse: collapse; 
     table-layout: fixed;
-    margin-bottom: 20px;
+    margin-bottom: ${p => p.theme.space[5]}px;
 `
 
 export const Header = styled.thead`
     height: 40px;
-    background-color: #83d4f2;
-    border: 1px solid ${p => p.theme.colors.tableBorder};
+    background-color: ${p => p.theme.colors.tableHeadBackground};
+    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.tableBorder};
 `
 
 export const Title = styled.th`
@@ -25,7 +24,7 @@ export const Title = styled.th`
     color: ${p => p.theme.colors.white};
     text-transform: uppercase;
     text-align: center;
-    border: 1px solid ${p => p.theme.colors.tableBorder};
+    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.tableBorder};
 `
 export const TableBody = styled.tbody`
     &:nth-of-type(odd){

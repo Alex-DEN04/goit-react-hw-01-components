@@ -13,12 +13,10 @@ export default function Statistics({ title, stats}) {
             as="section"
         >
             {title && (<Title>{title}</Title>)}
-        
             <Box
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
-            
             >
                 {stats.map(item => (
                     <Item key={item.id} bgColor={item.id}>

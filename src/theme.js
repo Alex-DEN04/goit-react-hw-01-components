@@ -4,7 +4,6 @@ export const theme = {
     white: '#fff',
     text: '#2a2a2a',
     background: '#e7e7e7',
-    // backgroundSecond: '#757575',
     primary: '#07c',
     secondary: '#403f3fb1',
     accent: '#609',
@@ -16,6 +15,7 @@ export const theme = {
     backgroundFourth: '#008080',
     chipColorOnline: 'green',
     chipColorOfline: 'red',
+    tableHeadBackground: '#83d4f2',
     tableBackgroundSecond: '#6a68681e',
     tableBackgroundFirst: '#fff',
     tableBorder: '#aeaaaa3d'

@@ -6,7 +6,7 @@ export const theme = {
     background: '#e7e7e7',
     // backgroundSecond: '#757575',
     primary: '#07c',
-    secondary: '#05a',
+    secondary: '#403f3fb1',
     accent: '#609',
     muted: '#f6f6f6',
     border: '#bdb9b9',
@@ -16,8 +16,8 @@ export const theme = {
     backgroundFourth: '#008080',
     chipColorOnline: 'green',
     chipColorOfline: 'red',
-
-
+    tableBackgroundSecond: '#6a68681e',
+    tableBackgroundFirst: '#fff',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

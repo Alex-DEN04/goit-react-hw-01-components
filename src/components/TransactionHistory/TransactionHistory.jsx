@@ -1,31 +1,29 @@
-import { Box } from "components/Box"
+// import { Box } from "components/Box"
 import TransactionHistoryItem from "./TransactionHistoryItem"
+import {Header, Table, Title, TableBody} from "./TransactionHistory.styled"
 export default function TransactionHistory({ items }) {
     return (
-        <Box
-            as="table"
-            width={[1]}
-        >
-            <thead>
+        <Table>
+            <Header>
                 <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
+                <Title>Type</Title>
+                <Title>Amount</Title>
+                <Title>Currency</Title>
                 </tr>
-            </thead>
+            </Header>
             
             {items.map(item => (
-            <tbody key={item.id}>
+            <TableBody key={item.id}>
                 <TransactionHistoryItem
                     type={item.type}
                     amount={item.amount}
                     currency={item.currency}
                 
                 />
-            </tbody>
+            </TableBody>
             ))}
             
-        </Box>
+        </Table>
     )
     
 }

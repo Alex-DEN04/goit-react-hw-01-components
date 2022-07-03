@@ -37,7 +37,7 @@ export const Item = styled.li`
     border-color: ${p => p.theme.colors.border};
     padding: ${p => p.theme.space[0]}px;
     background-color: ${p => p.theme.colors.background};
-    :not(:first-child) {
+    :not(:first-of-type) {
         border-left: ${p => p.theme.borders.normal};
         border-color: ${p => p.theme.colors.border};
 }

@@ -5,7 +5,7 @@ export const Table = styled.table`
     margin-right: auto;
     margin-left: auto;
     box-shadow: 1px #bdb9b9;
-    border: 1px solid #eee;
+    border: 1px solid ${p => p.theme.colors.tableBorder};
     border-collapse: collapse; 
     table-layout: fixed;
     margin-bottom: 20px;
@@ -14,7 +14,7 @@ export const Table = styled.table`
 export const Header = styled.thead`
     height: 40px;
     background-color: #83d4f2;
-    border: 1px solid #eee;
+    border: 1px solid ${p => p.theme.colors.tableBorder};
 `
 
 export const Title = styled.th`
@@ -25,7 +25,7 @@ export const Title = styled.th`
     color: ${p => p.theme.colors.white};
     text-transform: uppercase;
     text-align: center;
-    border: 1px solid #eee;
+    border: 1px solid ${p => p.theme.colors.tableBorder};
 `
 export const TableBody = styled.tbody`
     &:nth-of-type(odd){

@@ -18,6 +18,7 @@ export const theme = {
     chipColorOfline: 'red',
     tableBackgroundSecond: '#6a68681e',
     tableBackgroundFirst: '#fff',
+    tableBorder: '#aeaaaa3d'
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

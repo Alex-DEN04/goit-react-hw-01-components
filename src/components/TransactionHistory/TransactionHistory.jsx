@@ -1,7 +1,11 @@
+import { Box } from "components/Box"
 import TransactionHistoryItem from "./TransactionHistoryItem"
 export default function TransactionHistory({ items }) {
     return (
-        <table class="transaction-history">
+        <Box
+            as="table"
+            width={[1]}
+        >
             <thead>
                 <tr>
                 <th>Type</th>
@@ -11,7 +15,7 @@ export default function TransactionHistory({ items }) {
             </thead>
             
             {items.map(item => (
-            <tbody id={item.id}>
+            <tbody key={item.id}>
                 <TransactionHistoryItem
                     type={item.type}
                     amount={item.amount}
@@ -21,7 +25,7 @@ export default function TransactionHistory({ items }) {
             </tbody>
             ))}
             
-        </table>
+        </Box>
     )
     
 }

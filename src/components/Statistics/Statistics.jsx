@@ -1,25 +1,36 @@
 import PropTypes from 'prop-types';
-export default function Statistics({ title, stats }) {
+import { Box } from 'components/Box';
+import { Item, Title, Percentage, Label } from './Statistics.styled';
+
+export default function Statistics({ title, stats}) {
     return (
-        <section class="statistics">
-            {title && (<h2 class="title">{title}</h2>)}
+        <Box
+            ml="auto"
+            mr="auto"
+            mt={[6]}
+            width="500px"            
+            bg="muted"
+            as="section"
+        >
+            {title && (<Title>{title}</Title>)}
         
-            <ul class="stat-list">
+            <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+            
+            >
                 {stats.map(item => (
-                    <li class="item" key={item.id}>
-                        <span class="label">{item.label}</span>
-                        <span class="percentage">{item.percentage}%</span>
-                    </li>
+                    <Item key={item.id} bgColor={item.id}>
+                        <Label>{item.label}</Label>
+                        <Percentage>{item.percentage}%</Percentage>
+                    </Item>
                 ))}    
-            </ul>
-        </section>
-        
+            </Box>
+        </Box>
     )
 }
 Statistics.propTypes = {
     title: PropTypes.string,
-    // userName: PropTypes.string.isRequired,
-    // tag: PropTypes.string.isRequired,
-    // location: PropTypes.string.isRequired,
-    // stats: PropTypes.objectOf(PropTypes.number),
+    stats: PropTypes.arrayOf(PropTypes.object)
 }

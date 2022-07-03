@@ -1,17 +1,20 @@
+import { Box } from "components/Box"
 import FriendListItem from "./FriendListItem"
 export default function FriendList({items}) {
     return (
-        <ul class="friend-list">
+        <Box
+            as="ul"
+        >
             {items.map(item => (
-                <li class="item" key={item.id}>
-                    <FriendListItem 
-                        avatar={item.avatar}
-                        name={item.name}
-                        status={item.isOnline}
-                    />
-                </li>
+                
+                <FriendListItem 
+                    key={item.id}
+                    avatar={item.avatar}
+                    name={item.name}
+                    isOnline={item.isOnline}
+                />
             ))} 
-        </ul>
+        </Box>
     )
 
 }

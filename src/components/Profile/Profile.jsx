@@ -1,49 +1,58 @@
 import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
-import { Avatar } from './Profile.styled';
+import { Avatar, UserName, Address, Item, Stats, Quantity } from './Profile.styled';
 export default function Profile({ avatar, userName, tag, location, stats }) {
   return (
     <Box
-      bg="primary"
-      width={[1 / 2]}
+      bg="muted"
+      width={240}
       height="auto"
       ml="auto"
       mr="auto"
       mt={[6]}
       display="flex"
       flexDirection="column"
-      // align-items="center"
-      // justify-content="center"
       position="relative"
+      borderRadius={[4]}
+      boxShadow="2px 2px 2px 2px #bdb9b9"
       as="section"
       >
-        <Box
-        
+        <Box 
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          p={[5]}
+          as="div"
+          
         >
           <Avatar
             src={avatar}
             alt="User avatar"
-            class="avatar"
           />
-          <p class="name">{userName}</p>
-          <p class="tag">@{tag}</p>
-          <p class="location">{location}</p>
+          <UserName>{userName}</UserName>
+          <Address>@{tag}</Address>
+          <Address>{location}</Address>
         </Box>
 
-        <ul class="stats">
-          <li>
-            <span class="label">Followers</span>
-            <span class="quantity">{stats.followers}</span>
-          </li>
-          <li>
-            <span class="label">Views</span>
-            <span class="quantity">{stats.views}</span>
-          </li>
-          <li>
-            <span class="label">Likes</span>
-            <span class="quantity">{stats.likes}</span>
-          </li>
-        </ul>
+        <Box 
+          display="flex"
+          p={[0]}
+          m={[0]}
+          as="ul">
+          <Item>
+            <Stats>Followers</Stats>
+            <Quantity>{stats.followers}</Quantity>
+          </Item>
+          <Item>
+            <Stats>Views</Stats>
+            <Quantity>{stats.views}</Quantity>
+          </Item>
+          <Item>
+            <Stats>Likes</Stats>
+            <Quantity>{stats.likes}</Quantity>
+          </Item>
+        </Box>
       </Box>
     )
 };

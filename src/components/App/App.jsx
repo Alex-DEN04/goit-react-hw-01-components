@@ -9,30 +9,25 @@ import transactions from '../../data/transactions.json';
 
 export const App = () => {
   const { username, tag, location, avatar, stats } = user;
-  return (
-    <Profile
-      userName={username}
-      tag={tag}
-      location={location}
-      avatar={avatar}
-      stats={stats}
-    />
-  );
-};
-
-export const AppStatistic = () => {
   const statisticTitle = true;
-  return statisticTitle ? (
-    <Statistics title="Upload stats" stats={data} />
-  ) : (
-    <Statistics stats={data} />
+  return (
+    <>
+      <Profile
+        userName={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
+      />
+      <>
+        {statisticTitle ? (
+          <Statistics title="Upload stats" stats={data} />
+        ) : (
+          <Statistics stats={data} />
+        )}
+      </>
+      <FriendList items={friends} />;
+      <TransactionHistory items={transactions} />;
+    </>
   );
-};
-
-export const AppFriendList = () => {
-  return <FriendList items={friends} />;
-};
-
-export const AppTransactionHistory = () => {
-  return <TransactionHistory items={transactions} />;
 };
